@@ -1,0 +1,14 @@
+{
+  "name": "front-1-trimestre-2-daw",
+  "version": "1.0.0",
+  "description": "Instalar gulp: npm install -g gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  }
+}
