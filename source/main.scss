@@ -1,0 +1,13 @@
+@use 'base/variables';
+@use 'base/mixins';
+@use 'base/reset';
+
+@use 'components/buttons';
+
+@use 'layout/layout';
+
+@use 'pages/background';
+
+/* Comando para actualizar
+sass source/main.scss build/css/index.css 
+*/

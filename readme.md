@@ -17,3 +17,11 @@ Instalar gulp-sass: npm install -g gulp-sass0
 
 
 # Extensiones Utiles
+
+
+
+
+
+# Ejecutar comandos SASS
+
+Ejecutar el .scss para hacer los cambios en el .css:  "sass source/main.scss build/css/index.css"
