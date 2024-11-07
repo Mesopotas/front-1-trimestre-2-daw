@@ -1,10 +1,10 @@
 # Guia Instalación
 
-Instalar gulp: npm install -g gulp 
+Instalar gulp: npm install gulp 
 
-Instalar sass: npm install -g sass
+Instalar sass: npm install sass
 
-Instalar gulp-sass: npm install -g gulp-sass0
+Instalar gulp-sass: npm install gulp-sass
 
 
 # Instrucciones en primera instalacion
