@@ -1,0 +1,22 @@
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+@use "../base/typography" as *;
+
+.peliculas__trending, .peliculas__display{
+  color: $text-color;
+  padding: 15px 40px;
+}
+
+.peliculas__trending{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.peliculas__display{
+  display: grid;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 15px 10px;
+}

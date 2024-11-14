@@ -1,0 +1,26 @@
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+@use "../base/typography" as *;
+
+.footer__grid{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $text-color;
+  background: linear-gradient(180deg, rgba(7,5,9,1) 0%, rgba(62,0,55,1) 100%);
+  padding: 40px 120px;
+}
+
+.footer__contenedor p, .footer__contenedor img {
+  margin: 0;
+}
+
+.footer__contenedor img{
+  max-width: 24px;
+  max-height: 30px;
+}
+
+.align__icons{
+  display: flex;
+  gap: 10px;
+}

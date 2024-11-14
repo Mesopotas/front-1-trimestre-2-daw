@@ -1,0 +1,8 @@
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+@use "../base/typography" as *;
+
+.carrousel__imagen{
+  max-width: 270px;
+  max-height: 410px;
+}

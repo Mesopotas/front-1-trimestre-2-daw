@@ -1,9 +1,12 @@
 @use 'base/variables';
-@use 'base/mixins';
-@use 'base/reset';
+@use 'base/typography';
+
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/solutions';
 
 @use 'components/buttons';
+@use 'components/carrousel';
+@use 'components/movie-display';
 
-@use 'layout/layout';
-
-@use 'pages/background';
+@use 'pages/home';

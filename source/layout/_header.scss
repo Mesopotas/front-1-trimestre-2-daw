@@ -1,0 +1,22 @@
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+@use "../base/typography" as *;
+
+.header__grid{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: $gradient-bg;
+  padding: 20px 40px;
+}
+
+.header__contenedor{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.logo{
+  max-width: 60%;
+  max-height: 60%;
+}
