@@ -2,7 +2,27 @@
 @use "../base/variables" as *;
 @use "../base/typography" as *;
 
-.carrousel__imagen{
+.carousel .sample-text {
+  text-align: center;
+  font-size: 1.5em;
+  color: $text-color;
+  margin-bottom: 15px;
+  padding: 0 40px;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background-color: $primary-color;
+    margin: 8px auto 0;
+  }
+}
+
+.carrousel--imagen{
   max-width: 270px;
   max-height: 410px;
+  &:hover{
+    transform: scale(1.05);
+  }
 }

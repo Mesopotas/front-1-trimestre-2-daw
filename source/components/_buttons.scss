@@ -2,24 +2,12 @@
 @use "../base/variables" as *;
 @use "../base/typography" as *;
 
-.boton__peque{
-    background-color: transparent;
-    color: $text-color;
-    font-weight: bold;
-    padding: 10px 25px;
-    border: 1px solid $text-color;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.boton-peque {
+  @include boton-peque(10px 25px, 1em, $text-color);
 }
-  
-.boton__peque:hover{
-      background-color: $text-color;
-      color: $background-color;
-}
-  
+
 .icon {
-    color: $text-color;
-    font-size: 20px;
-    padding: 10px;
+  color: $text-color;
+  font-size: 20px;
+  padding: 10px;
 }

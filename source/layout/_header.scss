@@ -2,21 +2,23 @@
 @use "../base/variables" as *;
 @use "../base/typography" as *;
 
-.header__grid{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: $gradient-bg;
+.header--grid {
+  @include flex-center(space-around, center);
+  @include gradient-bg($gradient-color-1, $gradient-color-2, 0deg);
   padding: 20px 40px;
 }
 
-.header__contenedor{
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+.header--contenedor {
+  @include flex-center(flex-end, center);
 }
 
-.logo{
+.logo {
   max-width: 60%;
   max-height: 60%;
+}
+
+.icon {
+  color: $text-color;
+  font-size: 24px;
+  padding: 10px;
 }

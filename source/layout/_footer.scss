@@ -2,25 +2,28 @@
 @use "../base/variables" as *;
 @use "../base/typography" as *;
 
-.footer__grid{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.footer--grid {
+  @include flex-center(space-between, center);
+  @include gradient-bg($gradient-color-1, $gradient-color-2, 180deg);
   color: $text-color;
-  background: linear-gradient(180deg, rgba(7,5,9,1) 0%, rgba(62,0,55,1) 100%);
   padding: 40px 120px;
 }
 
-.footer__contenedor p, .footer__contenedor img {
+.footer--contenedor p {
   margin: 0;
 }
 
-.footer__contenedor img{
+.footer--contenedor img {
+  margin: 0;
   max-width: 24px;
   max-height: 30px;
 }
 
-.align__icons{
-  display: flex;
+.align-icons {
+  @include flex-center;
   gap: 10px;
+
+  .footer--contenedor {
+    @include flex-center;
+  }
 }
