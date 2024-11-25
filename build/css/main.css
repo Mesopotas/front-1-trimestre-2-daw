@@ -814,3 +814,67 @@ a {
 .pelicula__similar-section .pelicula__similar-posters img:hover {
   transform: scale(1.05);
 }
+
+.location {
+  padding: 50px;
+  background-color: rgba(249, 249, 249, 0);
+  text-align: center;
+}
+
+.location__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.location__title {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.location__description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.location__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.location__info {
+  flex: 1;
+  text-align: center;
+  color: white;
+}
+
+.location__info-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.location__info-item {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.location__map {
+  flex: 1;
+}
+
+.location__map iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 450px;
+  border: 0;
+}
+
+p.location__description {
+  padding-bottom: 20px;
+}
