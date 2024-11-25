@@ -259,8 +259,7 @@ body {
 
 .footer--grid {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-evenly;
   background: rgb(7, 5, 9);
   background: linear-gradient(180deg, rgb(7, 5, 9) 0%, rgb(62, 0, 55) 100%);
   color: #FFFFFF;

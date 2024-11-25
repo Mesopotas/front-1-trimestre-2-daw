@@ -3,7 +3,8 @@
 @use "../base/typography" as *;
 
 .footer--grid {
-  @include flex-center(space-between, center);
+  display: flex;
+  justify-content: space-evenly;
   @include gradient-bg($gradient-color-1, $gradient-color-2, 180deg);
   color: $text-color;
   padding: 40px 120px;
