@@ -1,0 +1,121 @@
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+@use "../base/typography" as *;
+
+.pago__content {
+    padding: 40px 100px;
+    color: $text-color;
+  }
+  
+  .pago__section-title {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+  
+    &::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 2px;
+      background-color: $primary-color;
+      margin: 5px auto 15px;
+    }
+  }
+  
+  .pago__summary-text {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.5;
+    max-width: 500px;
+    margin: 0 auto;
+    color: white;
+  }
+  
+  .pago__summary-section {
+    padding-bottom: 10px;
+    color: white;
+  }
+  
+  .pago__personal-info-section {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+  }
+  
+  .pago__personal-info-form {
+    @include flex-center(flex-start, center);
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+  }
+  
+  .pago__form-row {
+    @include flex-center(flex-start, center);
+    gap: 20px;
+  }
+  
+  .pago__form-group {
+    display: flex;
+    flex-direction: column;
+  
+    label {
+      font-size: 0.9em;
+      margin-bottom: 5px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      padding: 10px;
+      border: none;
+      border-bottom: 1px solid $text-color;
+      background-color: transparent;
+      color: $text-color;
+      width: 200px;
+  
+      &:focus {
+        outline: none;
+        border-bottom: 1px solid $input-focus-color;
+      }
+    }
+  }
+  
+  .pago__details-content {
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+  }
+  
+  .pago__detalles {
+    display: grid;
+    justify-items: center;
+    padding-top: 20px;
+  }
+  
+  #tickets {
+    width: 300px;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    background-color: #333;
+    color: $text-color;
+    text-align: center;
+  }
+  
+  .pago__purchase--button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    &:hover{
+        background-color: #E50914;
+        color: #FFFFFF;
+    }
+  }
+  

@@ -1,0 +1,125 @@
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+@use "../base/typography" as *;
+
+.categorias__principal .categorias__sample-text {
+  text-align: center;
+  font-size: 1.5em;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+.categorias__principal .categorias__sample-text::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 2px;
+  background-color: #E50914;
+  margin: 8px auto 0;
+}
+
+.categorias__poster-row {
+  display: grid; /* Cambiar a grid para mayor control */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas adaptables */
+  gap: 20px; /* Espacio uniforme entre las tarjetas */
+  justify-items: center; /* Centra cada ítem horizontalmente */
+  align-items: start; /* Alinea verticalmente al principio */
+  margin-top: 20px;
+  padding: 0 30px 10px;
+}
+
+.categorias__poster-row a {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.categorias__poster-title {
+  margin-top: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 1.2;
+}
+
+
+.categorias__poster-row img {
+  width: 77%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categorias__poster-row img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.categorias__categories {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.categorias__categories h2 {
+  font-size: 1.5em;
+  margin-top: 65px;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.categorias__categories h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 2px;
+  background-color: #E50914;
+  margin: 5px auto 0;
+}
+
+.categorias__category-buttons {
+  display: flex;
+  padding-left: 100px;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.categorias__category-buttons button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: transparent;
+  color: #FFF;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid whitesmoke;
+}
+
+.categorias__category-buttons button:hover {
+  color: #E50914;
+  border-bottom: 2px solid #E50914;
+}
+
+.categorias__movie-posters {
+  display: grid; /* Cambiar a grid */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Distribución adaptable */
+  gap: 20px; /* Espacio uniforme */
+  justify-items: center; /* Centra cada ítem horizontalmente */
+  align-items: start; /* Alinea verticalmente al principio */
+  padding: 20px;
+}
+
+.categorias__movie-posters img {
+  width: 77%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categorias__movie-posters img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}

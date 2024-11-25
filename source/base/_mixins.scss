@@ -37,3 +37,17 @@
     }
   }
   
+  @mixin seat(
+    $widht-seat: $widht-seat,
+    $height-seat: $height-seat,
+    $display-seat: $display-seat,
+    $background-size: $background-size-seat,
+    $background-position: $background-position-seat
+  ) {
+    width: $widht-seat;
+    height: $height-seat;
+    display: $display-seat;
+    background-size: $background-size;
+    background-position: $background-position;
+  }
+  
