@@ -813,3 +813,91 @@ a {
 .pelicula__similar-section .pelicula__similar-posters img:hover {
   transform: scale(1.05);
 }
+
+.privacy__content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+}
+.privacy__header {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+.privacy__title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.privacy__section {
+  margin-bottom: 20px;
+}
+.privacy__section-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.privacy__section-text {
+  margin-bottom: 10px;
+}
+.privacy__list {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+.privacy__list-item {
+  margin-bottom: 5px;
+}
+.privacy__link {
+  color: #1e90ff;
+  text-decoration: none;
+}
+.privacy__link:hover {
+  text-decoration: underline;
+}
+
+.cookies {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+.cookies__content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+}
+.cookies__header {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+.cookies__title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.cookies__section {
+  margin-bottom: 20px;
+}
+.cookies__section-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.cookies__section-text {
+  margin-bottom: 10px;
+}
+.cookies__list {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+.cookies__list-item {
+  margin-bottom: 5px;
+}
+.cookies__link {
+  color: #1e90ff;
+  text-decoration: none;
+}
+.cookies__link:hover {
+  text-decoration: underline;
+}

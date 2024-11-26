@@ -1,4 +1,52 @@
-@use "../base/mixins" as *;
-@use "../base/variables" as *;
-@use "../base/typography" as *;
+.privacy {
+    &__content {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        color: white;
+    }
 
+    &__header {
+        text-align: center;
+        margin-bottom: 20px;
+        background-color: transparent;
+    }
+
+    &__title {
+        font-size: 2.5em;
+        font-weight: bold; 
+        margin-bottom: 10px;
+    }
+
+    &__section {
+        margin-bottom: 20px;
+
+        &-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        &-text {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__list {
+        margin-left: 20px;
+        list-style-type: disc;
+
+        &-item {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__link {
+        color: #1e90ff; 
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
