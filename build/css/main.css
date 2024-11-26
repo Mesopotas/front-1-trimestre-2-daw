@@ -216,19 +216,30 @@ body {
 }
 
 .peliculas-trending {
-  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  justify-content: center;
   padding: 15px 40px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .peliculas-display {
-  display: grid;
-  justify-content: space-around;
   text-align: center;
-  align-items: center;
-  padding: 15px 10px;
+}
+.peliculas-display a {
+  text-decoration: none;
+  color: #fff;
+}
+.peliculas-display a img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.peliculas-display a p {
+  margin-top: 10px;
+  font-size: 1rem;
 }
 
 .header--grid {
