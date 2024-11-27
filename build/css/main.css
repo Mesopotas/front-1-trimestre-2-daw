@@ -535,6 +535,21 @@ a {
   background-color: #45A049; /* Color de asiento al pasar el ratón */
 }
 
+.butacas__seats--display {
+  width: 100%;
+  min-height: 30px;
+  margin-bottom: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background-color: #333333; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-x: auto; /* Manejo de desbordamiento horizontal */
+  white-space: nowrap; /* Mantén el texto en una línea */
+}
+
 .butacas__seat-selection {
   display: flex;
   justify-content: space-between;
