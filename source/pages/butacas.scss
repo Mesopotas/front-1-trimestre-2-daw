@@ -2,6 +2,45 @@
 @use "../base/variables" as *;
 @use "../base/typography" as *;
 
+
+.butacas__seats--grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 columnas */
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%; /* Ajusta el ancho completo del contenedor */
+  padding: 10px;
+  border-radius: 8px; /* Bordes redondeados del contenedor */
+
+  .seat {
+    width: 40px;
+    height: 40px;
+    background-color: #4CAF50; /* Color de asiento disponible */
+    border-radius: 4px; /* Bordes redondeados del asiento */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em; /* Tamaño del texto del número */
+    font-weight: bold;
+    color: #ffffff; /* Color del número del asiento */
+    transition: background-color 0.3s ease-in-out;
+
+    &.selected {
+      background-color: #FF5733; /* Color de asiento seleccionado */
+    }
+    &:hover {
+      background-color: #45A049; /* Color de asiento al pasar el ratón */
+    }
+
+  }
+
+}
+
+
+
+
 .butacas__seat-selection {
   display: flex;
   justify-content: space-between;
@@ -67,16 +106,8 @@
   padding: 10px;
   margin-bottom: 20px;
   font-weight: bold;
-  height: 15%;
 }
 
-.butacas__seats--grid {
-  display: grid;
-  grid-template-columns: repeat(15, 30px);
-  gap: 5px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
 
 .butacas__selected-seats {
   text-align: center;
