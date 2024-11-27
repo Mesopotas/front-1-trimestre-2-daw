@@ -390,6 +390,9 @@ a {
   .home__solutions .home__solution-content {
     flex-direction: column;
   }
+  .home__solutions .home__solution-content--image-left {
+    flex-direction: column-reverse;
+  }
 }
 .butacas__seat-selection {
   display: flex;
