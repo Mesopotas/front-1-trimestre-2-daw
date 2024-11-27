@@ -12,7 +12,7 @@
   }
   
   .privacy-title {
-    font-size: 40px; // Título principal
+    font-size: 40px; 
     font-weight: bold;
     margin-bottom: 10px;
   }
@@ -22,7 +22,7 @@
   }
   
   .privacy-section-title {
-    font-size: 24px; // Título de la sección
+    font-size: 24px; 
     font-weight: bold;
     margin-bottom: 10px;
   }
@@ -30,7 +30,7 @@
   .privacy-section-text {
     margin-bottom: 10px;
     font-size: 16px;
-    line-height: 1.6; // Mejora la legibilidad
+    line-height: 1.6; 
   }
   
   .privacy-list {
@@ -45,7 +45,7 @@
   }
   
   .privacy-link {
-    color: #1e90ff; // Enlace en azul claro
+    color: #1e90ff; 
     text-decoration: none;
   
     &:hover {
@@ -54,38 +54,82 @@
   }
   @media (max-width: 768px) {
     .privacy-content {
-      padding: 10px; // Reduce el padding en dispositivos pequeños
+      padding: 10px; 
     }
   
     .privacy-title {
-      font-size: 28px; // Ajusta el tamaño del título principal
+      font-size: 28px;
       margin-bottom: 15px;
     }
   
     .privacy-section-title {
-      font-size: 20px; // Reduce el tamaño del título de la sección
-      text-align: center; // Centra los títulos en pantallas pequeñas
+      font-size: 20px; 
+      text-align: center; 
       margin-bottom: 15px;
     }
   
     .privacy-section-text {
-      font-size: 14px; // Reduce el tamaño del texto para mejor adaptación
-      line-height: 1.5; // Mantiene legibilidad
-      text-align: justify; // Justifica el texto para presentación más profesional
+      font-size: 14px;
+      line-height: 1.5; 
+      text-align: justify; 
       padding-left: 4%;
       padding-right: 4%;
     }
   
     .privacy-list {
-      margin-left: 15px; // Reduce la indentación en listas
+      margin-left: 15px; 
     }
   
     .privacy-list-item {
-      font-size: 14px; // Reduce el tamaño de los elementos de la lista
-      line-height: 1.4; // Ajusta el espaciado entre líneas
+      font-size: 14px; 
+      line-height: 1.4; 
     }
   
     .privacy-link {
-      font-size: 14px; // Ajusta el tamaño de los enlaces
+      font-size: 14px; 
     }
   }  
+
+  @media (max-width: 390px) {
+  .privacy-content {
+    padding: 10px;
+  }
+
+  .privacy-header {
+    text-align: center; 
+    margin-bottom: 20px;
+
+    .privacy-title {
+      font-size: 1.8em; 
+    }
+
+    .privacy-date {
+      font-size: 0.9em; 
+    }
+  }
+
+  .privacy-section {
+    margin-bottom: 15px; 
+
+    .privacy-section-title {
+      font-size: 1.2em; 
+      margin-bottom: 10px;
+    }
+
+    .privacy-section-text {
+      font-size: 0.9em; 
+      line-height: 1.5; 
+      text-align: justify; 
+    }
+
+    .privacy-list {
+      padding-left: 15px; 
+      font-size: 0.9em; 
+      line-height: 1.4;
+
+      .privacy-list-item {
+        margin-bottom: 10px; 
+      }
+    }
+  }
+}

@@ -2,24 +2,27 @@
 @use "../base/variables" as *;
 @use "../base/typography" as *;
 
-.peliculas-trending{
-  color: #fff;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.peliculas-display{
+.peliculas-trending {
   display: grid;
-  justify-content: space-around;
-  text-align: center;
-  align-items: center;
-  padding: 15px 10px;
-}
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 25px;
+  padding-left: 5%;
+  padding-right: 5%;
 
-.peliculas-display img{
-  border-radius: 4%;
+  .peliculas-display {
+    text-align: center;
+
+    a img {
+      width: 100%;
+      height: auto; 
+      border-radius: 5px; 
+    }
+
+    .center {
+      font-size: 0.9rem; 
+      margin-top: 10px;
+    }
+  }
 }
 
 @media (max-width: 768px) {

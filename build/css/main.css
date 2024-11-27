@@ -255,23 +255,23 @@ body {
 }
 
 .peliculas-trending {
-  color: #fff;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.peliculas-display {
   display: grid;
-  justify-content: space-around;
-  text-align: center;
-  align-items: center;
-  padding: 15px 10px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
-
-.peliculas-display img {
-  border-radius: 4%;
+.peliculas-trending .peliculas-display {
+  text-align: center;
+}
+.peliculas-trending .peliculas-display a img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.peliculas-trending .peliculas-display .center {
+  font-size: 0.9rem;
+  margin-top: 10px;
 }
 
 @media (max-width: 768px) {
@@ -1095,6 +1095,60 @@ a {
   color: #FFFFFF;
 }
 
+@media (max-width: 390px) {
+  .pago__summary-section,
+  .pago__personal-info-section,
+  .pago__detalles {
+    padding: 10px;
+    text-align: center;
+  }
+  .pago__section-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  .pago__summary-text {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  .pago__personal-info-form .pago__form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .pago__personal-info-form .pago__form-row .pago__form-group {
+    width: 100%;
+  }
+  .pago__personal-info-form .pago__form-row .pago__form-group label {
+    font-size: 0.9em;
+    display: block;
+  }
+  .pago__personal-info-form .pago__form-row .pago__form-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9em;
+  }
+  .pago__details-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pago__details-content label {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+  }
+  .pago__details-content input {
+    width: 90%;
+    padding: 8px;
+    font-size: 0.9em;
+  }
+  .pago__purchase--button {
+    width: 90%;
+    margin: 20px auto 0;
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+  }
+}
 .pelicula__movie-detail {
   display: flex;
   justify-content: flex-start;
@@ -1302,6 +1356,34 @@ a {
   }
   .pelicula__similar-section .pelicula__similar-posters a img {
     max-width: 100%;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 390px) {
+  .pelicula__movie-detail {
+    text-align: center;
+  }
+  .pelicula__movie-detail .pelicula__movie-poster img {
+    max-width: 90%;
+  }
+  .pelicula__movie-detail .pelicula__movie-content .pelicula__movie-info-left,
+  .pelicula__movie-detail .pelicula__movie-content .pelicula__movie-info-right {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .pelicula__movie-detail .pelicula__movie-content .pelicula__movie-info-left .pelicula__movie-title {
+    font-size: 1.5rem;
+  }
+  .pelicula__similar-section .pelicula__similar-posters {
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+    grid-auto-flow: column;
+  }
+  .pelicula__similar-section .pelicula__similar-posters a img {
+    width: 80%;
+    height: auto;
     border-radius: 5px;
   }
 }
@@ -1561,5 +1643,40 @@ p.location__description {
   }
   .privacy-link {
     font-size: 14px;
+  }
+}
+@media (max-width: 390px) {
+  .privacy-content {
+    padding: 10px;
+  }
+  .privacy-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .privacy-header .privacy-title {
+    font-size: 1.8em;
+  }
+  .privacy-header .privacy-date {
+    font-size: 0.9em;
+  }
+  .privacy-section {
+    margin-bottom: 15px;
+  }
+  .privacy-section .privacy-section-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  .privacy-section .privacy-section-text {
+    font-size: 0.9em;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  .privacy-section .privacy-list {
+    padding-left: 15px;
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  .privacy-section .privacy-list .privacy-list-item {
+    margin-bottom: 10px;
   }
 }
