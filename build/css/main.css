@@ -255,25 +255,23 @@ body {
 }
 
 .peliculas-trending {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .peliculas-trending .peliculas-display {
-  flex: 0 1 calc(20% - 1rem);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
-.peliculas-trending img {
+.peliculas-trending .peliculas-display a img {
   width: 100%;
   height: auto;
-  max-width: 150px;
+  border-radius: 5px;
 }
-.peliculas-trending p {
-  text-align: center;
-  margin-top: 0.5rem;
+.peliculas-trending .peliculas-display .center {
+  font-size: 0.9rem;
+  margin-top: 10px;
 }
 
 @media (max-width: 768px) {
@@ -401,6 +399,32 @@ body {
   align-items: center;
 }
 
+@media (max-width: 390px) {
+  .footer--grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .footer--grid .footer--contenedor {
+    flex: 1 0 45%;
+    text-align: center;
+    font-size: 0.9em;
+  }
+  .footer--grid .footer--contenedor a {
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  .footer--grid .align-icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .footer--grid .align-icons img {
+    width: 24px;
+    height: auto;
+  }
+}
 a {
   text-decoration: none;
   color: white;
@@ -1097,6 +1121,60 @@ a {
   color: #FFFFFF;
 }
 
+@media (max-width: 390px) {
+  .pago__summary-section,
+  .pago__personal-info-section,
+  .pago__detalles {
+    padding: 10px;
+    text-align: center;
+  }
+  .pago__section-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  .pago__summary-text {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  .pago__personal-info-form .pago__form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .pago__personal-info-form .pago__form-row .pago__form-group {
+    width: 100%;
+  }
+  .pago__personal-info-form .pago__form-row .pago__form-group label {
+    font-size: 0.9em;
+    display: block;
+  }
+  .pago__personal-info-form .pago__form-row .pago__form-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9em;
+  }
+  .pago__details-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pago__details-content label {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+  }
+  .pago__details-content input {
+    width: 90%;
+    padding: 8px;
+    font-size: 0.9em;
+  }
+  .pago__purchase--button {
+    width: 90%;
+    margin: 20px auto 0;
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+  }
+}
 .pelicula__movie-detail {
   display: flex;
   justify-content: flex-start;
@@ -1195,7 +1273,7 @@ a {
 }
 .pelicula__similar-section .pelicula__similar-posters {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
@@ -1307,6 +1385,34 @@ a {
     border-radius: 5px;
   }
 }
+@media (max-width: 390px) {
+  .pelicula__movie-detail {
+    text-align: center;
+  }
+  .pelicula__movie-detail .pelicula__movie-poster img {
+    max-width: 90%;
+  }
+  .pelicula__movie-detail .pelicula__movie-content .pelicula__movie-info-left,
+  .pelicula__movie-detail .pelicula__movie-content .pelicula__movie-info-right {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .pelicula__movie-detail .pelicula__movie-content .pelicula__movie-info-left .pelicula__movie-title {
+    font-size: 1.5rem;
+  }
+  .pelicula__similar-section .pelicula__similar-posters {
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+    grid-auto-flow: column;
+  }
+  .pelicula__similar-section .pelicula__similar-posters a img {
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+  }
+}
 .location {
   padding: 50px;
   background-color: rgba(249, 249, 249, 0);
@@ -1404,6 +1510,38 @@ p.location__description {
     height: 250px;
   }
 }
+@media (max-width: 390px) {
+  .location__wrapper {
+    padding: 10px;
+    text-align: center;
+  }
+  .location__wrapper .location__title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+  .location__wrapper .location__description {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .location__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .location__content .location__info {
+    text-align: center;
+    font-size: 0.9em;
+  }
+  .location__content .location__info .location__info-item {
+    margin-bottom: 10px;
+  }
+  .location__content .location__map iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+  }
+}
 .cookies {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -1478,6 +1616,48 @@ p.location__description {
   }
   .cookies__content .cookies__section .cookies__list .cookies__list-item .cookies__link {
     font-size: 14px;
+  }
+}
+@media (max-width: 390px) {
+  .cookies__content {
+    padding: 10px 20px;
+  }
+  .cookies__header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .cookies__header .cookies__title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  .cookies__header .cookies__date {
+    font-size: 0.9em;
+  }
+  .cookies__section {
+    margin-bottom: 20px;
+    padding: 0 15px;
+  }
+  .cookies__section .cookies__section-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  .cookies__section .cookies__text {
+    font-size: 0.9em;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  .cookies__section .cookies__list {
+    padding-left: 15px;
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  .cookies__section .cookies__list .cookies__list-item {
+    margin-bottom: 10px;
+  }
+  .cookies__section .cookies__list .cookies__link {
+    font-size: 0.9em;
+    text-decoration: underline;
+    word-break: break-word;
   }
 }
 .privacy-content {
@@ -1563,5 +1743,40 @@ p.location__description {
   }
   .privacy-link {
     font-size: 14px;
+  }
+}
+@media (max-width: 390px) {
+  .privacy-content {
+    padding: 10px;
+  }
+  .privacy-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .privacy-header .privacy-title {
+    font-size: 1.8em;
+  }
+  .privacy-header .privacy-date {
+    font-size: 0.9em;
+  }
+  .privacy-section {
+    margin-bottom: 15px;
+  }
+  .privacy-section .privacy-section-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  .privacy-section .privacy-section-text {
+    font-size: 0.9em;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  .privacy-section .privacy-list {
+    padding-left: 15px;
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  .privacy-section .privacy-list .privacy-list-item {
+    margin-bottom: 10px;
   }
 }
