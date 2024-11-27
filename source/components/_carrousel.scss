@@ -130,3 +130,14 @@
   background-color: red !important; 
   opacity: 1 !important; 
 }
+
+
+@media (max-width: 768px) {
+  .swiper-slide p {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0;
+    transition: font-weight 0.3s ease;
+    padding-top: 4%;
+  }
+}

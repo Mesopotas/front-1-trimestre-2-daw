@@ -23,11 +23,11 @@
 }
 
 .location__content {
-    display: flex; // Activa Flexbox
-    justify-content: center; // Centra horizontalmente
-    align-items: center; // Centra verticalmente
-    height: 100%; // Asegura que ocupe toda la altura del contenedor
-    gap: 20px; // Espaciado entre los elementos (mapa e información)
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100%;
+    gap: 20px;
 }
 
 
@@ -66,3 +66,46 @@ p.location__description {
 }
 
 
+@media (max-width: 768px) {
+    .location {
+      padding: 20px;
+  
+      &__wrapper {
+        &__title {
+          font-size: 28px;
+        }
+  
+        &__description {
+          font-size: 16px;
+          line-height: 1.5;
+          margin-bottom: 20px;
+        }
+      }
+  
+      &__content {
+        flex-direction: column;
+        gap: 30px;
+  
+        &__info {
+          width: 100%;
+          text-align: center;
+  
+          &-title {
+            font-size: 20px;
+          }
+  
+          &-item {
+            font-size: 14px;
+          }
+        }
+  
+        &__map {
+          width: 100%;
+  
+          iframe {
+            height: 250px;
+          }
+        }
+      }
+    }
+  }

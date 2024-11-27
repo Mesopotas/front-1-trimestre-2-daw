@@ -106,3 +106,213 @@
     color: #FFFFFF;
   }
 }
+
+@media (max-width: 768px) {
+  .butacas__seat-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+
+    .butacas__movie-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .butacas__movie-poster {
+        max-width: 80%; // Ajusta el tamaño del póster
+        height: auto;
+        margin-bottom: 15px;
+      }
+
+      .butacas__movie-description {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0 10px;
+      }
+    }
+
+    .butacas__seats-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .butacas__seats-title {
+        text-align: center;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+      }
+
+      .butacas__seats-legend {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+
+        div {
+          font-size: 0.9rem;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          .butacas__seat {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+
+      .butacas__screen {
+        text-align: center;
+        font-size: 1rem;
+        background-color: #ddd;
+        padding: 5px;
+        margin: 0 auto;
+        max-width: 80%;
+        border-radius: 5px;
+      }
+
+      .butacas__seats--grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); // Muestra 4 columnas en móvil
+        gap: 10px;
+        justify-content: center;
+
+        .butacas__seat-row {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr); // 5 asientos por fila
+          gap: 5px;
+
+          .butacas__seat-free {
+            width: 20px;
+            height: 20px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+          }
+        }
+      }
+
+      .butacas__selected-seats {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        h3 {
+          font-size: 1.2rem;
+        }
+
+        .butacas__seats--input {
+          width: 80%;
+          padding: 10px;
+          font-size: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          text-align: center;
+        }
+
+        .butacas__purchase--button {
+          padding: 10px 20px;
+          font-size: 1rem;
+          background-color: #532e91;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .butacas__seat-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+
+    .butacas__movie-info {
+      display: none; // Oculta la imagen y la descripción de la película
+    }
+
+    .butacas__seats-container {
+      width: 100%; // Usa todo el ancho disponible
+      padding: 0;
+
+      .butacas__seats-title {
+        text-align: center;
+        font-size: 1.5rem; // Tamaño ajustado del título
+        margin-bottom: 10px;
+      }
+
+      .butacas__seats-legend {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+
+        div {
+          font-size: 0.9rem;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          .butacas__seat {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+
+      .butacas__screen {
+        text-align: center;
+        font-size: 1rem;
+        background-color: #ddd;
+        padding: 5px;
+        margin: 0 auto;
+        max-width: 80%;
+        border-radius: 5px;
+      }
+
+      .butacas__seats--grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); // Grilla de 4 columnas en móvil
+        gap: 10px;
+        justify-content: center;
+      }
+
+      .butacas__selected-seats {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        h3 {
+          font-size: 1.4rem; // Ajuste del tamaño del título
+          text-align: center;
+        }
+
+        .butacas__seats--input {
+          width: 80%;
+          padding: 10px;
+          font-size: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          text-align: center;
+        }
+
+        .butacas__purchase--button {
+          padding: 10px 20px;
+          font-size: 1.2rem;
+          background-color: #532e91;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

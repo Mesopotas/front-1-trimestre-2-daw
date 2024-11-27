@@ -53,3 +53,47 @@
         }
     }
 }
+
+
+@media (max-width: 768px) {
+    .cookies__content {
+      padding-top: 10px;
+      padding-bottom: 25px;
+      padding-left: 40px;
+      padding-right: 40px;
+  
+      .cookies__header {
+        .cookies__title {
+          font-size: 32px;
+        }
+  
+        .cookies__date {
+          font-size: 16px;
+        }
+      }
+  
+      .cookies__section {
+        .cookies__section-title {
+          font-size: 24px;
+          text-align: center; 
+        }
+  
+        .cookies__text {
+          font-size: 14px;
+          line-height: 22px;
+          text-align: justify; 
+        }
+  
+        .cookies__list {
+          .cookies__list-item {
+            font-size: 14px;
+            line-height: 22px;
+  
+            .cookies__link {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }

@@ -2,23 +2,57 @@
 @use "../base/variables" as *;
 @use "../base/typography" as *;
 
-.header--grid {
-  @include flex-center(space-around, center);
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   @include gradient-bg($gradient-color-1, $gradient-color-2, 0deg);
-  padding: 20px 40px;
-}
+  padding: 20px 75px;
 
-.header--contenedor {
-  @include flex-center(flex-end, center);
-}
+  &__logo img {
+      max-height: 130px; 
+  }
 
-.logo {
-  max-width: 60%;
-  max-height: 60%;
-}
+  &__buttons {
+      display: flex;
+      gap: 50px; 
+  }
 
-.icon {
-  color: $text-color;
-  font-size: 24px;
-  padding: 10px;
+  &__button {
+      position: relative;
+      background: none;
+      border: 2px solid #fff;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 10px 20px; 
+      text-decoration: none;
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      font-size: 16px; 
+      transition: background 0.3s, color 0.3s;
+      border-radius: 4%;
+
+      &:hover {
+          background: #fff;
+          color: $gradient-color-1;
+      }
+
+      &::before {
+          content: "";
+          position: absolute;
+          top: -4px;
+          left: -4px;
+          right: -4px;
+          bottom: -4px;
+          border: 2px solid #fff;
+          opacity: 0.5;
+          z-index: -1;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      &:hover::before {
+          opacity: 1;
+          transform: scale(1.05);
+      }
+  }
 }

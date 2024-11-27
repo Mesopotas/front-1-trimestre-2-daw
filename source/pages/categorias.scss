@@ -19,11 +19,11 @@
 }
 
 .categorias__poster-row {
-  display: grid; /* Cambiar a grid para mayor control */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas adaptables */
-  gap: 20px; /* Espacio uniforme entre las tarjetas */
-  justify-items: center; /* Centra cada ítem horizontalmente */
-  align-items: start; /* Alinea verticalmente al principio */
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 20px;
+  justify-items: center;
+  align-items: start;
   margin-top: 20px;
   padding: 0 30px 10px;
 }
@@ -103,11 +103,11 @@
 }
 
 .categorias__movie-posters {
-  display: grid; /* Cambiar a grid */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Distribución adaptable */
-  gap: 20px; /* Espacio uniforme */
-  justify-items: center; /* Centra cada ítem horizontalmente */
-  align-items: start; /* Alinea verticalmente al principio */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 20px;
+  justify-items: center;
+  align-items: start; 
   padding: 20px;
 }
 
@@ -122,4 +122,77 @@
 .categorias__movie-posters img:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .categorias__content {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .categorias__principal {
+    .categorias__sample-text {
+      font-size: 1.2rem;
+    }
+
+    .categorias__poster-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+
+      a {
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 5px;
+        }
+
+        .categorias__poster-title {
+          font-size: 0.9rem;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+
+  .categorias__categories {
+    h2 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .categorias__category-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-content: center;
+      justify-content: center;
+      padding-left: 0%;
+
+      button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+    }
+
+    .categorias__movie-posters {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+
+      a {
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 5px;
+        }
+
+        .categorias__poster-title {
+          font-size: 0.9rem;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
 }

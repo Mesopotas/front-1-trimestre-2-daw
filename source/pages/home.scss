@@ -49,3 +49,13 @@
     text-align: center;
     color:white;
 }
+
+
+@media (max-width: 768px) {
+.home__solutions {
+    padding: 10px;
+    .home__solution-content {
+      flex-direction: column;
+    }
+  }
+}

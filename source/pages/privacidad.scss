@@ -1,52 +1,91 @@
-.privacy {
-    &__content {
-        padding: 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-        color: white;
+.privacy-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+  }
+  
+  .privacy-header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: transparent;
+  }
+  
+  .privacy-title {
+    font-size: 40px; // Título principal
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .privacy-section {
+    margin-bottom: 20px;
+  }
+  
+  .privacy-section-title {
+    font-size: 24px; // Título de la sección
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .privacy-section-text {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.6; // Mejora la legibilidad
+  }
+  
+  .privacy-list {
+    margin-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .privacy-list-item {
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .privacy-link {
+    color: #1e90ff; // Enlace en azul claro
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
     }
-
-    &__header {
-        text-align: center;
-        margin-bottom: 20px;
-        background-color: transparent;
+  }
+  @media (max-width: 768px) {
+    .privacy-content {
+      padding: 10px; // Reduce el padding en dispositivos pequeños
     }
-
-    &__title {
-        font-size: 2.5em;
-        font-weight: bold; 
-        margin-bottom: 10px;
+  
+    .privacy-title {
+      font-size: 28px; // Ajusta el tamaño del título principal
+      margin-bottom: 15px;
     }
-
-    &__section {
-        margin-bottom: 20px;
-
-        &-title {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        &-text {
-            margin-bottom: 10px;
-        }
+  
+    .privacy-section-title {
+      font-size: 20px; // Reduce el tamaño del título de la sección
+      text-align: center; // Centra los títulos en pantallas pequeñas
+      margin-bottom: 15px;
     }
-
-    &__list {
-        margin-left: 20px;
-        list-style-type: disc;
-
-        &-item {
-            margin-bottom: 5px;
-        }
+  
+    .privacy-section-text {
+      font-size: 14px; // Reduce el tamaño del texto para mejor adaptación
+      line-height: 1.5; // Mantiene legibilidad
+      text-align: justify; // Justifica el texto para presentación más profesional
+      padding-left: 4%;
+      padding-right: 4%;
     }
-
-    &__link {
-        color: #1e90ff; 
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
+  
+    .privacy-list {
+      margin-left: 15px; // Reduce la indentación en listas
     }
-}
+  
+    .privacy-list-item {
+      font-size: 14px; // Reduce el tamaño de los elementos de la lista
+      line-height: 1.4; // Ajusta el espaciado entre líneas
+    }
+  
+    .privacy-link {
+      font-size: 14px; // Ajusta el tamaño de los enlaces
+    }
+  }  
