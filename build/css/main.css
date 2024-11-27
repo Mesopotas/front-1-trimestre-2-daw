@@ -255,23 +255,25 @@ body {
 }
 
 .peliculas-trending {
-  color: #fff;
-  padding: 15px 40px;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.peliculas-trending .peliculas-display {
+  flex: 0 1 calc(20% - 1rem);
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
-
-.peliculas-display {
-  display: grid;
-  justify-content: space-around;
+.peliculas-trending img {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+}
+.peliculas-trending p {
   text-align: center;
-  align-items: center;
-  padding: 15px 10px;
-}
-
-.peliculas-display img {
-  border-radius: 4%;
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 768px) {

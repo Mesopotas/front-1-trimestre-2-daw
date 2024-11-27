@@ -2,25 +2,31 @@
 @use "../base/variables" as *;
 @use "../base/typography" as *;
 
-.peliculas-trending{
-  color: #fff;
-  padding: 15px 40px;
+.peliculas-trending {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .peliculas-display {
+    flex: 0 1 calc(20% - 1rem); // 5 columnas
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
 }
 
-.peliculas-display{
-  display: grid;
-  justify-content: space-around;
-  text-align: center;
-  align-items: center;
-  padding: 15px 10px;
-}
-
-.peliculas-display img{
-  border-radius: 4%;
-}
 
 @media (max-width: 768px) {
   .peliculas-trending {
