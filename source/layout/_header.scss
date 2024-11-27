@@ -56,3 +56,25 @@
       }
   }
 }
+@media (max-width: 390px) {
+    .nav-bar {
+      flex-direction: column;
+      align-items: center;
+  
+      .nav-bar__logo img {
+        width: 80%; 
+        margin-bottom: 10px; 
+      }
+  
+      .nav-bar__buttons {
+        flex-direction: row;
+        gap: 10px;
+      }
+  
+      .nav-bar__button {
+        font-size: 14px; 
+        padding: 8px 12px;
+      }
+    }
+  }
+  
