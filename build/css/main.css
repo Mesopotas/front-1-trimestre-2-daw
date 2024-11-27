@@ -399,6 +399,32 @@ body {
   align-items: center;
 }
 
+@media (max-width: 390px) {
+  .footer--grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .footer--grid .footer--contenedor {
+    flex: 1 0 45%;
+    text-align: center;
+    font-size: 0.9em;
+  }
+  .footer--grid .footer--contenedor a {
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  .footer--grid .align-icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .footer--grid .align-icons img {
+    width: 24px;
+    height: auto;
+  }
+}
 a {
   text-decoration: none;
   color: white;
@@ -1484,6 +1510,38 @@ p.location__description {
     height: 250px;
   }
 }
+@media (max-width: 390px) {
+  .location__wrapper {
+    padding: 10px;
+    text-align: center;
+  }
+  .location__wrapper .location__title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+  .location__wrapper .location__description {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .location__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .location__content .location__info {
+    text-align: center;
+    font-size: 0.9em;
+  }
+  .location__content .location__info .location__info-item {
+    margin-bottom: 10px;
+  }
+  .location__content .location__map iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+  }
+}
 .cookies {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -1558,6 +1616,48 @@ p.location__description {
   }
   .cookies__content .cookies__section .cookies__list .cookies__list-item .cookies__link {
     font-size: 14px;
+  }
+}
+@media (max-width: 390px) {
+  .cookies__content {
+    padding: 10px 20px;
+  }
+  .cookies__header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .cookies__header .cookies__title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  .cookies__header .cookies__date {
+    font-size: 0.9em;
+  }
+  .cookies__section {
+    margin-bottom: 20px;
+    padding: 0 15px;
+  }
+  .cookies__section .cookies__section-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  .cookies__section .cookies__text {
+    font-size: 0.9em;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  .cookies__section .cookies__list {
+    padding-left: 15px;
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  .cookies__section .cookies__list .cookies__list-item {
+    margin-bottom: 10px;
+  }
+  .cookies__section .cookies__list .cookies__link {
+    font-size: 0.9em;
+    text-decoration: underline;
+    word-break: break-word;
   }
 }
 .privacy-content {
