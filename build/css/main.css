@@ -96,6 +96,7 @@ body {
 .carrousel--imagen {
   max-width: 270px;
   max-height: 410px;
+  border-radius: 4%;
 }
 .carrousel--imagen:hover {
   transform: scale(1.05);
@@ -264,14 +265,20 @@ body {
 .peliculas-trending .peliculas-display {
   text-align: center;
 }
-.peliculas-trending .peliculas-display a img {
-  width: 100%;
+.peliculas-trending .peliculas-display a, .peliculas-trending .peliculas-display img {
+  max-width: 400px;
+  max-height: 224px;
+  min-width: 200px;
+  min-height: 200px;
   height: auto;
   border-radius: 5px;
 }
 .peliculas-trending .peliculas-display .center {
   font-size: 0.9rem;
   margin-top: 10px;
+}
+.peliculas-trending .peliculas-display p {
+  color: white;
 }
 
 @media (max-width: 768px) {
