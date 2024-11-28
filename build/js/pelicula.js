@@ -123,3 +123,4 @@ const idPelicula = urlParams.get('id')
 // Llamadas a las funciones
 cargarDetallesPelicula(idPelicula);
 cargarHorarios();
+
