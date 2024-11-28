@@ -531,9 +531,6 @@ a {
 .butacas__seats--grid .seat.selected {
   background-color: #FF5733; /* Color de asiento seleccionado */
 }
-.butacas__seats--grid .seat:hover {
-  background-color: #45A049; /* Color de asiento al pasar el ratón */
-}
 
 .butacas__seats--display {
   width: 100%;
