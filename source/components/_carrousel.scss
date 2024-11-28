@@ -30,6 +30,7 @@
 .carrousel--imagen{
   max-width: 270px;
   max-height: 410px;
+  border-radius: 4%;
   &:hover{
     transform: scale(1.05);
   }
