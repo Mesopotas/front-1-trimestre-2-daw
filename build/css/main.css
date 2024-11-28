@@ -1194,6 +1194,7 @@ a {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  gap: 80px;
 }
 
 .pelicula__movie-info-left {
