@@ -102,7 +102,7 @@ const cargarPeliculasSimilares = async (categoriaId) => {
     similarMoviesContainer.innerHTML = '';
     peliculasSimilares.forEach((pelicula) => {
       const similarMovieCard = `
-        <a href="pelicula.html?id=${pelicula.id}">
+        <a href="pelicula.html?id=${pelicula.id_Pelicula}">
           <img src="${pelicula.caratula}" alt="Carátula de ${pelicula.nombre}" />
           <p class="center">${pelicula.nombre}</p>
         </a>
