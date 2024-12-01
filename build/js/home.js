@@ -1,4 +1,4 @@
-const apiUrl = 'https://localhost:7057/MinimalCinema/Pelicula';
+const apiUrl = 'http://52.7.162.68:5131/MinimalCinema/Pelicula'; // Cambia a la IP pública y puerto correctos
 const peliculasTrending = document.querySelector('.peliculas-trending');
 const categoriaId = 6; // Cambia esto si es necesario para otras categorías
 
