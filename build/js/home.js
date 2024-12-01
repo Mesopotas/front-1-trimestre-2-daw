@@ -22,7 +22,7 @@ fetch(apiUrl)
       peliculasFiltradas.forEach(pelicula => {
         const peliculaElement = `
           <div class="peliculas-display" data-id="${pelicula.id_Pelicula}">
-            <img src="${pelicula.caratula}" class="carrousel--imagen"/>
+            <img src="${pelicula.caratula}" class="peliculas-display"/>
             <br>
             <p class="center">${pelicula.nombre}</p>
           </div>

@@ -12,8 +12,11 @@
   .peliculas-display {
     text-align: center;
 
-    a img {
-      width: 100%;
+    a, img {
+      max-width: 400px;
+      max-height: 224px;
+      min-width: 200px;
+      min-height: 200px;
       height: auto; 
       border-radius: 5px; 
     }
@@ -21,6 +24,10 @@
     .center {
       font-size: 0.9rem; 
       margin-top: 10px;
+    }
+
+    p {
+      color: white;
     }
   }
 }
