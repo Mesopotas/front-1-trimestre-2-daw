@@ -1,3 +1,4 @@
+
 const seatContainer = document.getElementById('seatContainer');
 const selectedSeatsDisplay = document.querySelector('.butacas__seats--display');
 

@@ -268,7 +268,6 @@ body {
 }
 .peliculas-trending .peliculas-display a, .peliculas-trending .peliculas-display img {
   max-width: 400px;
-  max-height: 224px;
   min-width: 200px;
   min-height: 200px;
   height: auto;
@@ -582,7 +581,7 @@ a {
 
 .butacas__seat-selection {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 40px 100px;
   gap: 40px;
 }
