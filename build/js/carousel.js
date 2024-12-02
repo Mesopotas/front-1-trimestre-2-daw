@@ -9,6 +9,7 @@ fetch(linkAPI)
     }
     return response.json(); // Convierte la respuesta a JSON
   })
+  
   .then(data => {
     // Limpia el contenido existente del carrusel
     swiperWrapper.innerHTML = '';
