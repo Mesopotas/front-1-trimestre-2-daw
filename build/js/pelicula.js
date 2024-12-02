@@ -1,6 +1,5 @@
 // URLs para las APIs de Película y Horarios
 const peliculaApiUrl = 'https://localhost:7057/MinimalCinema/Pelicula';
-const horariosApiUrl = 'https://localhost:7057/MinimalCinema/Horario';
 const categoriaApiUrl = 'https://localhost:7057/MinimalCinema/Pelicula/categoria';
 
 // Obtiene elementos HTML donde se cargarán los datos
@@ -77,7 +76,7 @@ const cargarHorarios = async () => {
     });
   } catch (error) {
     console.error('Error al cargar los horarios:', error);
-    showtimeContainer.innerHTML = '<p>Error al cargar los horarios.</p>';
+    showtimeContainer.innerHTML = '<p>No hay horarios disponibles.</p>';
   }
 };
 

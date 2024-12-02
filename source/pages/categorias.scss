@@ -104,11 +104,10 @@
 
 .categorias__movie-posters {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-  gap: 20px;
-  justify-items: center;
-  align-items: start; 
-  padding: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .categorias__movie-posters img {
