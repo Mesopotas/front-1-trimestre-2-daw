@@ -10,7 +10,7 @@ app.use('/images', express.static(path.join(__dirname, '../images')));
 // Servir páginas HTML dinámicamente
 app.get('/:page', (req, res) => {
   const page = req.params.page;
-  const filePath = path.join(__dirname, '../html', `${page}.html`);
+  const filePath = path.join(__dirname, '../html', `${page}`);
   res.sendFile(filePath, (err) => {
     if (err) {
       console.error(`Error al cargar ${page}.html:`, err);

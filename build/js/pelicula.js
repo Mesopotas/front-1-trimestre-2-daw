@@ -1,7 +1,7 @@
 // URLs para las APIs de Película y Horarios
-const peliculaApiUrl = 'https://localhost:7057/MinimalCinema/Pelicula';
-const horariosApiUrl = 'https://localhost:7057/MinimalCinema/Horario';
-const categoriaApiUrl = 'https://localhost:7057/MinimalCinema/Pelicula/categoria';
+const peliculaApiUrl = 'http://52.7.162.68:5131/MinimalCinema/Pelicula';
+const horariosApiUrl = 'http://52.7.162.68:5131/MinimalCinema/Horario';
+const categoriaApiUrl = 'http://52.7.162.68:5131/MinimalCinema/Pelicula/categoria';
 
 // Obtiene elementos HTML donde se cargarán los datos
 const caratulaElement = document.querySelector('.pelicula__movie-poster img');

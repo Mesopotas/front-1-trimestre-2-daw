@@ -1,5 +1,5 @@
 // URLs para las APIs de Película
-const peliculaApiUrl = 'https://localhost:7057/MinimalCinema/Pelicula';
+const peliculaApiUrl = 'http://52.7.162.68:5131/MinimalCinema/Pelicula';
 
 // Obtiene los elementos HTML donde se cargarán los datos
 const caratulaElement = document.querySelector('.pelicula__movie-poster img');
