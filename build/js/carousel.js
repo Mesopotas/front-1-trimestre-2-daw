@@ -1,4 +1,4 @@
-const linkAPI = 'https://localhost:7057/MinimalCinema/Pelicula'; // API para obtener las películas
+const linkAPI = 'http://52.7.162.68:5131/MinimalCinema/Pelicula'; // API para obtener las películas
 const swiperWrapper = document.querySelector('.swiper-wrapper'); // Elemento donde se insertan las películas en el carrusel
 
 // Llamada a la API para obtener las películas
