@@ -55,30 +55,6 @@ const cargarDetallesPelicula = async (idPelicula) => {
   }
 };
 
-// Función para cargar los horarios
-const cargarHorarios = async () => {
-  try {
-    const response = await fetch(horariosApiUrl);
-    if (!response.ok) {
-      throw new Error('Error al cargar los horarios.');
-    }
-    const horarios = await response.json();
-
-    // Limpia el contenedor y añade los horarios al HTML
-    showtimeContainer.innerHTML = '';
-    horarios.forEach((horario) => {
-      const horarioButton = `
-        <a href="butacas.html">
-          <button class="pelicula__showtime-button"><i class="fas fa-map-marker-alt"></i> ${horario.horario}</button>
-        </a>
-      `;
-      showtimeContainer.innerHTML += horarioButton;
-    });
-  } catch (error) {
-    console.error('Error al cargar los horarios:', error);
-    showtimeContainer.innerHTML = '<p>No hay horarios disponibles.</p>';
-  }
-};
 
 // Función para cargar películas similares
 const cargarPeliculasSimilares = async (categoriaId) => {
@@ -114,12 +90,106 @@ const cargarPeliculasSimilares = async (categoriaId) => {
   }
 };
 
-// ID de la película (puedes obtenerlo dinámicamente si es necesario)
-//const idPelicula = 4; // Cambia este valor al ID deseado
 const urlParams = new URLSearchParams(window.location.search);
 const idPelicula = urlParams.get('id')
 
 // Llamadas a las funciones
 cargarDetallesPelicula(idPelicula);
-cargarHorarios();
 
+/*
+
+// URL para el endpoint de la película con sala y horario
+const horariosApiUrl = 'https://localhost:7057/MinimalCinema/Sesion/pelicula/1/salas-horarios'; // Cambia el ID de la película según sea necesario
+
+// Elemento del DOM donde se actualizará el horario
+const showtimeSpan = document.getElementById('showtime');
+
+// Función para cargar el horario desde la API
+const cargarHorario = async () => {
+  try {
+    // Llama al endpoint para obtener los horarios
+    const response = await fetch(horariosApiUrl);
+
+    if (!response.ok) {
+      throw new Error(`Error al cargar el horario. Código de error: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    // Verifica si los datos tienen el formato correcto
+    if (!data || data.length === 0 || !data[0].horario || !data[0].horario.horario) {
+      throw new Error('No se encontró un horario válido en los datos.');
+    }
+
+    // Toma el primer horario disponible y actualiza el contenido del <span>
+    showtimeSpan.textContent = data[0].horario.horario; // Reemplaza el contenido con el primer horario
+
+  } catch (error) {
+    console.error('Error al cargar el horario:', error);
+    showtimeSpan.textContent = 'Horario no disponible'; // Muestra un mensaje de error en caso de fallo
+  }
+};
+
+// Llama a la función para cargar el horario
+cargarHorario();
+
+*/
+
+
+// Función para cargar los horarios desde la API
+const cargarHorarios = async (idPelicula) => {
+  try {
+    if (!idPelicula) {
+      throw new Error('No se ha proporcionado un ID de película válido.');
+    }
+
+    // Construye la URL con el idPelicula
+    const horariosApiUrl = `https://localhost:7057/MinimalCinema/Sesion/pelicula/${idPelicula}/salas-horarios`;
+
+    // Llama al endpoint para obtener los horarios
+    const response = await fetch(horariosApiUrl);
+
+    if (!response.ok) {
+      throw new Error(`Error al cargar los horarios. Código de error: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    // Verifica si los datos tienen el formato correcto
+    if (!data || data.length === 0) {
+      throw new Error('No se encontraron horarios.');
+    }
+
+    // Limpia el contenedor antes de agregar los horarios
+    showtimeContainer.innerHTML = '';
+
+    // Itera sobre los datos y genera un botón para cada horario
+    data.forEach(({ horario }) => {
+      if (!horario || !horario.horario) {
+        console.warn('Horario incompleto encontrado:', horario);
+        return;
+      }
+
+      // Crear un botón dinámicamente
+      const buttonHTML = `
+        <a href="butacas.html">
+          <button class="pelicula__showtime-button">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>${horario.horario}</span>
+          </button>
+        </a>
+      `;
+
+      // Agregar el botón al contenedor
+      showtimeContainer.insertAdjacentHTML('beforeend', buttonHTML);
+    });
+
+  } catch (error) {
+    console.error('Error al cargar los horarios:', error);
+    showtimeContainer.innerHTML = '<p>Error al cargar los horarios.</p>';
+  }
+};
+
+// Llamadas a las funciones
+cargarDetallesPelicula(idPelicula);
+cargarHorarios(idPelicula);
