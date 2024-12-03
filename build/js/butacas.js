@@ -6,7 +6,7 @@ let selectedSeats = []; // Lista de asientos seleccionados
 
 const fetchAsientos = async () => {
     try {
-        const response = await fetch('https://localhost:7057/MinimalCinema/Sesion/pelicula/1/salas-horarios');
+        const response = await fetch('http://52.7.162.68:5131/MinimalCinema/Sesion/pelicula/1/salas-horarios');
         if (!response.ok) {
             throw new Error('Error al obtener los datos del endpoint');
         }
