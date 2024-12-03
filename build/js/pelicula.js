@@ -93,7 +93,7 @@ const cargarHorarios = async (idPelicula) => {
       throw new Error('No se ha proporcionado un ID de película válido.');
     }
 
-    const horariosApiUrl = `https://localhost:7057/MinimalCinema/Sesion/pelicula/${idPelicula}/salas-horarios`;
+    const horariosApiUrl = `http://52.7.162.68:5131/MinimalCinema/Sesion/pelicula/${idPelicula}/salas-horarios`;
 
     const response = await fetch(horariosApiUrl);
 
