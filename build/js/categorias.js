@@ -1,7 +1,7 @@
 
 //Parte de Destacadas
 
-fetch('https://localhost:7057/MinimalCinema/Pelicula')
+fetch('http://52.7.162.68:5131/MinimalCinema/Pelicula')
     .then(response => response.json())
     .then(peliculas => {
         const peliculasFiltradas = peliculas.filter(pelicula => pelicula.id_Categoria === 1);
@@ -28,7 +28,7 @@ fetch('https://localhost:7057/MinimalCinema/Pelicula')
 
 
  // URL de tu API
-const apiUrl = 'https://localhost:7057/MinimalCinema/Pelicula';
+const apiUrl = 'http://52.7.162.68:5131/MinimalCinema/Pelicula';
 
 // Selecciona los botones y el contenedor de películas
 const botonesCategoria = document.querySelectorAll('.categorias__category-buttons button');
