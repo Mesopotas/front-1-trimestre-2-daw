@@ -1,24 +1,20 @@
 const apiUrl = 'https://localhost:7057/MinimalCinema/Pelicula';
 const peliculasTrending = document.querySelector('.peliculas-trending');
-const categoriaId = 6; // Cambia esto si es necesario para otras categorías
+const categoriaId = 6; 
 
-// Llamada a la API para obtener las películas
 fetch(apiUrl)
   .then(response => {
     if (!response.ok) {
       throw new Error('Error al cargar las películas: ' + response.statusText);
     }
-    return response.json(); // Convierte la respuesta a JSON
+    return response.json();
   })
   .then(data => {
-    // Limpia el contenido existente
     peliculasTrending.innerHTML = '';
 
-    // Filtra las películas por categoría
     const peliculasFiltradas = data.filter(pelicula => pelicula.id_Categoria === categoriaId);
 
     if (peliculasFiltradas.length > 0) {
-      // Genera dinámicamente el HTML solo para las películas filtradas
       peliculasFiltradas.forEach(pelicula => {
         const peliculaElement = `
           <div class="peliculas-display" data-id="${pelicula.id_Pelicula}">
@@ -27,20 +23,17 @@ fetch(apiUrl)
             <p class="center">${pelicula.nombre}</p>
           </div>
         `;
-        peliculasTrending.innerHTML += peliculaElement; // Añade la película al contenedor principal
+        peliculasTrending.innerHTML += peliculaElement; 
       });
 
-      // Agregar el evento de click para redirigir a la página de detalles
       document.querySelectorAll('.peliculas-display').forEach(peliculaDiv => {
         peliculaDiv.addEventListener('click', (event) => {
           const idPelicula = event.currentTarget.getAttribute('data-id');
-          console.log('ID de la película clickeada:', idPelicula); // Verifica que estamos obteniendo el ID
-          // Redirigir a la página de detalles con el ID de la película
+          console.log('ID de la película clickeada:', idPelicula);
           window.location.href = `pelicula.html?id=${idPelicula}`;
         });
       });
     } else {
-      // Si no se encuentran películas para la categoría, muestra un mensaje
       peliculasTrending.innerHTML = `<p>No se encontraron películas para la categoría ID ${categoriaId}.</p>`;
     }
   })

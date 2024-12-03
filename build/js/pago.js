@@ -1,6 +1,5 @@
-const selectedSeatsDisplay = document.querySelector('.butacas__seats--display'); // El div donde mostrar los asientos seleccionados
+const selectedSeatsDisplay = document.querySelector('.butacas__seats--display'); 
 
-// Recuperar los asientos seleccionados desde localStorage
 const savedSeats = localStorage.getItem('selectedSeats');
 
 if (savedSeats) {

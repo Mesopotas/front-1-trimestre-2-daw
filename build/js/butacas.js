@@ -4,7 +4,6 @@ const selectedSeatsDisplay = document.querySelector('.butacas__seats--display');
 
 let selectedSeats = [];
 
-// Recuperar los asientos seleccionados del localStorage al cargar la página
 const savedSeats = localStorage.getItem('selectedSeats');
 if (savedSeats) {
     selectedSeats = JSON.parse(savedSeats);
@@ -30,7 +29,6 @@ function fetchAsientos() {
                     seat.style.pointerEvents = 'none'; 
                 }
 
-                // Si el asiento está seleccionado, lo marcamos
                 if (selectedSeats.includes(asiento.numero.toString())) {
                     seat.classList.add('selected');
                 }
@@ -46,10 +44,8 @@ function fetchAsientos() {
                         seat.classList.add('selected');
                     }
 
-                    // Actualizar el contenido del div con los asientos seleccionados
                     selectedSeatsDisplay.textContent = selectedSeats.join(', ');
 
-                    // Guardar los asientos seleccionados en localStorage
                     localStorage.setItem('selectedSeats', JSON.stringify(selectedSeats));
                 });
 

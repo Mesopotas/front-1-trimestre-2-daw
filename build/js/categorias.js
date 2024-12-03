@@ -15,7 +15,7 @@ fetch('https://localhost:7057/MinimalCinema/Pelicula')
                         <p class="categorias__poster-title">${pelicula.nombre}</p>
                     </a>
                 `;
-                peliculasTrending.innerHTML += peliculaElement; // Añade la película al contenedor
+                peliculasTrending.innerHTML += peliculaElement;
             });
         }
     })
@@ -24,17 +24,12 @@ fetch('https://localhost:7057/MinimalCinema/Pelicula')
     });
 
 
-//Parte de las categorias
 
-
- // URL de tu API
 const apiUrl = 'https://localhost:7057/MinimalCinema/Pelicula';
 
-// Selecciona los botones y el contenedor de películas
 const botonesCategoria = document.querySelectorAll('.categorias__category-buttons button');
 const contenedorPeliculas = document.querySelector('.categorias__movie-posters');
 
-// Función para obtener las películas desde la API
 async function obtenerPeliculas() {
     try {
         const response = await fetch(apiUrl);
@@ -49,19 +44,15 @@ async function obtenerPeliculas() {
     }
 }
 
-// Función para mostrar películas de una categoría seleccionada
 async function mostrarPeliculas(categoriaSeleccionada) {
     const peliculas = await obtenerPeliculas();
 
-    // Filtra las películas por categoría
     const peliculasFiltradas = peliculas.filter(
         pelicula => pelicula.nombre_Categoria.toLowerCase() === categoriaSeleccionada.toLowerCase()
     );
 
-    // Limpia el contenedor de películas
     contenedorPeliculas.innerHTML = '';
 
-    // Inserta las películas filtradas
     if (peliculasFiltradas.length > 0) {
         peliculasFiltradas.forEach(pelicula => {
             const peliculaElement = `
@@ -73,15 +64,13 @@ async function mostrarPeliculas(categoriaSeleccionada) {
             contenedorPeliculas.innerHTML += peliculaElement;
         });
     } else {
-        // Si no hay películas en esta categoría, muestra un mensaje
         contenedorPeliculas.innerHTML = '<p>No hay películas en esta categoría.</p>';
     }
 }
 
-// Agrega eventos a los botones para mostrar películas según la categoría seleccionada
 botonesCategoria.forEach(boton => {
     boton.addEventListener('click', () => {
-        const categoriaSeleccionada = boton.textContent.trim(); // Obtiene el texto del botón
+        const categoriaSeleccionada = boton.textContent.trim(); 
         mostrarPeliculas(categoriaSeleccionada);
     });
 });

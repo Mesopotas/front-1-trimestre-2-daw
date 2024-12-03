@@ -60,7 +60,6 @@ const cargarPeliculasSimilares = async (categoriaId) => {
     }
     const peliculasSimilares = await response.json();
 
-    // Muestra las películas similares obtenidas
     console.log('Películas similares:', peliculasSimilares);
 
     similarMoviesContainer.innerHTML = '';
