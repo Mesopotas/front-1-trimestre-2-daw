@@ -1,8 +1,7 @@
-// URLs para las APIs de Película y Horarios
+
 const peliculaApiUrl = 'https://localhost:7057/MinimalCinema/Pelicula';
 const categoriaApiUrl = 'https://localhost:7057/MinimalCinema/Pelicula/categoria';
 
-// Obtiene elementos HTML donde se cargarán los datos
 const caratulaElement = document.querySelector('.pelicula__movie-poster img');
 const movieTitle = document.querySelector('.pelicula__movie-title');
 const directorElement = document.querySelector('.director');
@@ -13,7 +12,6 @@ const categoriaElement = document.querySelector('.categoria');
 const showtimeContainer = document.querySelector('.pelicula__showtime-container');
 const similarMoviesContainer = document.querySelector('.pelicula__similar-posters');
 
-// Función para cargar los detalles de la película por ID
 const cargarDetallesPelicula = async (idPelicula) => {
   try {
     const response = await fetch(`${peliculaApiUrl}/${idPelicula}`);
@@ -22,10 +20,8 @@ const cargarDetallesPelicula = async (idPelicula) => {
     }
     const pelicula = await response.json();
 
-    // Muestra los datos completos de la película para depuración
     console.log('Película obtenida:', pelicula);
 
-    // Asigna los datos obtenidos al HTML
     movieTitle.textContent = pelicula.nombre;
     directorElement.textContent = pelicula.directores;
     actoresElement.textContent = pelicula.actores;
@@ -33,17 +29,14 @@ const cargarDetallesPelicula = async (idPelicula) => {
     duracionElement.textContent = `${pelicula.duracion}h`;
     categoriaElement.textContent = pelicula.nombre_Categoria;
 
-    // Cambia la imagen de la carátula
     if (pelicula.caratula) {
       caratulaElement.src = pelicula.caratula;
       caratulaElement.alt = `Carátula de ${pelicula.nombre}`;
     }
 
-    // Verifica el idCategoria
-    const categoriaId = pelicula.id_Categoria; // Obtén el idCategoria de la película principal
-    console.log('idCategoria:', categoriaId); // Verifica que estamos recibiendo el idCategoria correctamente
+    const categoriaId = pelicula.id_Categoria;
+    console.log('idCategoria:', categoriaId);
 
-    // Carga las películas similares usando el idCategoria de la película principal
     if (categoriaId) {
       cargarPeliculasSimilares(categoriaId);
     } else {
@@ -55,49 +48,20 @@ const cargarDetallesPelicula = async (idPelicula) => {
   }
 };
 
-// Función para cargar los horarios
-const cargarHorarios = async () => {
-  try {
-    const response = await fetch(horariosApiUrl);
-    if (!response.ok) {
-      throw new Error('Error al cargar los horarios.');
-    }
-    const horarios = await response.json();
-
-    // Limpia el contenedor y añade los horarios al HTML
-    showtimeContainer.innerHTML = '';
-    horarios.forEach((horario) => {
-      const horarioButton = `
-        <a href="butacas.html">
-          <button class="pelicula__showtime-button"><i class="fas fa-map-marker-alt"></i> ${horario.horario}</button>
-        </a>
-      `;
-      showtimeContainer.innerHTML += horarioButton;
-    });
-  } catch (error) {
-    console.error('Error al cargar los horarios:', error);
-    showtimeContainer.innerHTML = '<p>No hay horarios disponibles.</p>';
-  }
-};
-
-// Función para cargar películas similares
 const cargarPeliculasSimilares = async (categoriaId) => {
   try {
-    // Verifica que categoriaId no sea undefined
     if (!categoriaId) {
       throw new Error('Categoria ID es undefined');
     }
 
-    const response = await fetch(`${categoriaApiUrl}?idCategoria=${categoriaId}`); // Correcta construcción de la URL
+    const response = await fetch(`${categoriaApiUrl}?idCategoria=${categoriaId}`);
     if (!response.ok) {
       throw new Error('Error al cargar las películas similares.');
     }
     const peliculasSimilares = await response.json();
 
-    // Muestra las películas similares obtenidas
     console.log('Películas similares:', peliculasSimilares);
 
-    // Limpia el contenedor y añade las películas similares al HTML
     similarMoviesContainer.innerHTML = '';
     peliculasSimilares.forEach((pelicula) => {
       const similarMovieCard = `
@@ -114,12 +78,58 @@ const cargarPeliculasSimilares = async (categoriaId) => {
   }
 };
 
-// ID de la película (puedes obtenerlo dinámicamente si es necesario)
-//const idPelicula = 4; // Cambia este valor al ID deseado
 const urlParams = new URLSearchParams(window.location.search);
 const idPelicula = urlParams.get('id')
 
-// Llamadas a las funciones
 cargarDetallesPelicula(idPelicula);
-cargarHorarios();
 
+
+
+
+const cargarHorarios = async (idPelicula) => {
+  try {
+    if (!idPelicula) {
+      throw new Error('No se ha proporcionado un ID de película válido.');
+    }
+
+    const horariosApiUrl = `https://localhost:7057/MinimalCinema/Sesion/pelicula/${idPelicula}/salas-horarios`;
+
+    const response = await fetch(horariosApiUrl);
+
+    if (!response.ok) {
+      throw new Error(`Error al cargar los horarios. Código de error: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (!data || data.length === 0) {
+      throw new Error('No se encontraron horarios.');
+    }
+
+    showtimeContainer.innerHTML = '';
+
+    data.forEach(({ idSesion, horario }) => {
+      if (!horario || !horario.horario) {
+        console.warn('Horario incompleto encontrado:', horario);
+        return;
+      }
+
+      const buttonHTML = `
+        <a href="butacas.html?idSesion=${idSesion}">
+          <button class="pelicula__showtime-button">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>${horario.horario}</span>
+          </button>
+        </a>
+      `;
+
+      showtimeContainer.insertAdjacentHTML('beforeend', buttonHTML);
+    });
+
+  } catch (error) {
+    console.error('Error al cargar los horarios:', error);
+    showtimeContainer.innerHTML = '<p>No hay horarios disponibles.</p><br><p>Gracias y sentimos las molestias.<p>';
+  }
+};
+
+cargarHorarios(idPelicula);
