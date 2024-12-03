@@ -3,36 +3,66 @@
 @use "../base/typography" as *;
 
 
+
+#seatContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+.sala-container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.sala-container h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
 .butacas__seats--grid {
   display: grid;
-  grid-template-columns: repeat(10, 1fr); /* 10 columnas */
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 18px;
   justify-content: center;
-  margin-bottom: 20px;
-  width: 100%; /* Ajusta el ancho completo del contenedor */
-  padding: 10px;
-  border-radius: 8px; /* Bordes redondeados del contenedor */
-
-  .seat {
-    width: 40px;
-    height: 40px;
-    background-color: #4CAF50; /* Color de asiento disponible */
-    border-radius: 4px; /* Bordes redondeados del asiento */
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.9em; /* Tamaño del texto del número */
-    font-weight: bold;
-    color: #ffffff; /* Color del número del asiento */
-    transition: background-color 0.3s ease-in-out;
-
-    &.selected {
-      background-color: #FF5733; /* Color de asiento seleccionado */
-    }
-  }
-
+  margin: 20px 0;
 }
+
+.seat {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: lightgray;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.seat.ocupado {
+  background-color: red;
+  cursor: not-allowed;
+}
+
+.seat.libre {
+  background-color: green;
+}
+
+.seat.selected {
+  background-color: yellow;
+  border-color: #ff0;
+}
+
 
 
 .butacas__seats--display {
