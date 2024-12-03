@@ -111,8 +111,9 @@
 }
 
 .categorias__movie-posters img {
-  width: 77%;
-  height: auto;
+  max-width: 240px;
+  min-width: 165px;
+  height: 300px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
