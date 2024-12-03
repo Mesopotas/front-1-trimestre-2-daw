@@ -270,7 +270,12 @@ body {
   max-width: 240px;
   min-width: 165px;
   min-height: 300px;
-  border-radius: 5px;
+  border-radius: 30px;
+  transition: transform 0.3s;
+}
+.peliculas-trending .peliculas-display img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 .peliculas-trending .peliculas-display .center {
   font-size: 0.9rem;
