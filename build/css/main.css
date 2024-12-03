@@ -267,6 +267,7 @@ body {
   text-align: center;
 }
 .peliculas-trending .peliculas-display a, .peliculas-trending .peliculas-display img {
+<<<<<<< HEAD
   max-width: 240px;
   min-width: 165px;
   min-height: 300px;
@@ -276,6 +277,13 @@ body {
 .peliculas-trending .peliculas-display img:hover {
   transform: scale(1.05);
   cursor: pointer;
+=======
+  max-width: 400px;
+  min-width: 200px;
+  min-height: 200px;
+  height: auto;
+  border-radius: 5px;
+>>>>>>> asientos
 }
 .peliculas-trending .peliculas-display .center {
   font-size: 0.9rem;
@@ -538,32 +546,63 @@ a {
     margin: 20px 0;
   }
 }
+#seatContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+.sala-container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.sala-container h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
 .butacas__seats--grid {
   display: grid;
-  grid-template-columns: repeat(10, 1fr); /* 10 columnas */
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 18px;
   justify-content: center;
-  margin-bottom: 20px;
-  width: 100%; /* Ajusta el ancho completo del contenedor */
-  padding: 10px;
-  border-radius: 8px; /* Bordes redondeados del contenedor */
+  margin: 20px 0;
 }
-.butacas__seats--grid .seat {
+
+.seat {
   width: 40px;
   height: 40px;
-  background-color: #4CAF50; /* Color de asiento disponible */
-  border-radius: 4px; /* Bordes redondeados del asiento */
-  cursor: pointer;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 0.9em; /* Tamaño del texto del número */
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: lightgray;
+  cursor: pointer;
+  font-size: 14px;
   font-weight: bold;
-  color: #ffffff; /* Color del número del asiento */
-  transition: background-color 0.3s ease-in-out;
+  text-align: center;
+  transition: background-color 0.3s ease;
 }
-.butacas__seats--grid .seat.selected {
-  background-color: #FF5733; /* Color de asiento seleccionado */
+
+.seat.ocupado {
+  background-color: red;
+  cursor: not-allowed;
+}
+
+.seat.libre {
+  background-color: green;
+}
+
+.seat.selected {
+  background-color: yellow;
+  border-color: #ff0;
 }
 
 .butacas__seats--display {
@@ -585,7 +624,7 @@ a {
 
 .butacas__seat-selection {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 40px 100px;
   gap: 40px;
 }
