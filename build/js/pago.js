@@ -24,7 +24,7 @@ const finalizarCompra = async (event) => {
     const sesionId = 1; // ID de la sesión. Cambiar según corresponda.
     try {
         for (const seat of selectedSeats) {
-            const endpoint = `https://localhost:7057/MinimalCinema/Sala/1/asientos/${seat}`; // Endpoint con el número del asiento
+            const endpoint = `http://52.7.162.68:5131/MinimalCinema/Sala/1/asientos/${seat}`; // Endpoint con el número del asiento
 
             const response = await fetch(endpoint, {
                 method: 'PUT', // Método PUT para actualizar el estado
