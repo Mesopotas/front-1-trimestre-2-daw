@@ -1504,7 +1504,7 @@ a {
 }
 .location {
   padding: 75px;
-  padding-bottom: 18%;
+  padding-bottom: 15%;
   background-color: rgba(249, 249, 249, 0);
   text-align: center;
 }
@@ -1533,6 +1533,7 @@ a {
   align-items: center;
   height: 100%;
   gap: 20px;
+  padding-top: 45px;
 }
 
 .location__info {
