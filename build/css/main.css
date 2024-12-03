@@ -1503,7 +1503,8 @@ a {
   }
 }
 .location {
-  padding: 50px;
+  padding: 75px;
+  padding-bottom: 18%;
   background-color: rgba(249, 249, 249, 0);
   text-align: center;
 }
@@ -1636,7 +1637,8 @@ p.location__description {
   line-height: 1.6;
 }
 .cookies__content {
-  padding: 20px;
+  padding: 75px;
+  padding-bottom: 10%;
   max-width: 1200px;
   margin: 0 auto;
   color: #fff;
@@ -1750,7 +1752,7 @@ p.location__description {
   }
 }
 .privacy-content {
-  padding: 20px;
+  padding: 50px;
   max-width: 1200px;
   margin: 0 auto;
   color: white;
