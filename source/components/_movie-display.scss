@@ -13,12 +13,16 @@
     text-align: center;
 
     a, img {
-      max-width: 400px;
-      max-height: 224px;
-      min-width: 200px;
-      min-height: 200px;
-      height: auto; 
-      border-radius: 5px; 
+      max-width: 240px;
+      min-width: 165px;
+      min-height: 300px;
+      border-radius: 30px;
+      transition: transform 0.3s; 
+    }
+
+    img:hover{
+      transform: scale(1.05);
+      cursor:pointer;
     }
 
     .center {

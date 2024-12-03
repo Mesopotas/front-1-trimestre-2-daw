@@ -89,13 +89,16 @@
 }
   
 .pelicula__similar-posters {
-      @include flex-center(space-evenly);
-      flex-wrap: wrap;
-      gap: 10px;
-  
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+      padding-left: 5%;
+      padding-right: 5%;
+      text-align: center;
       img {
-        width: 270px;
-        height: auto;
+        max-width: 240px;
+        min-width: 165px;
+        height: 300px;
         border-radius: $radius-image;
         box-shadow: $box-shadow;
         transition: transform 0.3s;

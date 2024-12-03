@@ -127,7 +127,7 @@ body {
 
 .swiper-slide img {
   max-width: 250px;
-  height: auto;
+  min-height: 380px;
   border-radius: 15px;
   margin-bottom: 10px;
 }
@@ -267,12 +267,15 @@ body {
   text-align: center;
 }
 .peliculas-trending .peliculas-display a, .peliculas-trending .peliculas-display img {
-  max-width: 400px;
-  max-height: 224px;
-  min-width: 200px;
-  min-height: 200px;
-  height: auto;
-  border-radius: 5px;
+  max-width: 240px;
+  min-width: 165px;
+  min-height: 300px;
+  border-radius: 30px;
+  transition: transform 0.3s;
+}
+.peliculas-trending .peliculas-display img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 .peliculas-trending .peliculas-display .center {
   font-size: 0.9rem;
@@ -972,16 +975,16 @@ a {
 
 .categorias__movie-posters {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  align-items: start;
-  padding: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .categorias__movie-posters img {
-  width: 77%;
-  height: auto;
+  max-width: 240px;
+  min-width: 165px;
+  height: 300px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1317,15 +1320,17 @@ a {
   background-color: #E50914;
 }
 .pelicula__similar-section .pelicula__similar-posters {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
 }
 .pelicula__similar-section .pelicula__similar-posters img {
-  width: 270px;
-  height: auto;
+  max-width: 240px;
+  min-width: 165px;
+  height: 300px;
   border-radius: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;

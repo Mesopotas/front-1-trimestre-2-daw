@@ -77,7 +77,7 @@ const cargarHorarios = async () => {
     });
   } catch (error) {
     console.error('Error al cargar los horarios:', error);
-    showtimeContainer.innerHTML = '<p>Error al cargar los horarios.</p>';
+    showtimeContainer.innerHTML = '<p>No hay horarios disponibles.</p>';
   }
 };
 
