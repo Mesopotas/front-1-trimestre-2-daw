@@ -267,7 +267,6 @@ body {
   text-align: center;
 }
 .peliculas-trending .peliculas-display a, .peliculas-trending .peliculas-display img {
-<<<<<<< HEAD
   max-width: 240px;
   min-width: 165px;
   min-height: 300px;
@@ -277,13 +276,6 @@ body {
 .peliculas-trending .peliculas-display img:hover {
   transform: scale(1.05);
   cursor: pointer;
-=======
-  max-width: 400px;
-  min-width: 200px;
-  min-height: 200px;
-  height: auto;
-  border-radius: 5px;
->>>>>>> asientos
 }
 .peliculas-trending .peliculas-display .center {
   font-size: 0.9rem;
@@ -563,7 +555,7 @@ a {
 .sala-container h2 {
   margin-bottom: 15px;
   font-size: 18px;
-  color: #333;
+  color: #ffffff;
   font-weight: bold;
 }
 
